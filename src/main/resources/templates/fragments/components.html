@@ -1,0 +1,43 @@
+<div th:fragment="navbar">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#02778e">
+        <div class="container-fluid">
+            <a class="navbar-brand" th:href="@{/coronavirus/home}">CoronaVirusTracker</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" th:href="@{/coronavirus/home}">Home</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+<div th:fragment="footer">
+    <footer class="text-center text-lg-start" style="background-color:#02778e">
+        <!-- Copyright -->
+        <div class="text-center p-3" style="color: #white;">
+            © 2020 Copyright:
+            <a class="text-light" href="">Corona Virus Tracker</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+</div>
+
+<div th:fragment="jumbotron(${totalCases})">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="background-color:#CFF4FC;">
+                <div class="card-body">
+                    <h1 class="card-title" th:text="${totalCases}"></h1>
+                    <h2 class="card-text">Total Cases reported as of today</h2>
+                    <p>This application lists the current number of cases reported across the globe</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
